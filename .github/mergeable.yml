@@ -6,4 +6,4 @@ mergeable:
     - do: approvals
       required: 
         reviewers: [ 'atk1213', 'jeffcho0227', 'vivxz', 'whthwang', 'tracyyu']
-        min: 2s
+        min: 1
