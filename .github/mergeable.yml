@@ -4,6 +4,6 @@ mergeable:
   - name: 'Peer Review'
   validate:
     - do: approvals
-      require: 
-        reviewers: [ 'atk1213', 'jeffcho0227',  'vivxz', 'whthwang', 'tracyyu']
-        min: 2
+      required: 
+        reviewers: [ 'atk1213', 'jeffcho0227', 'vivxz', 'whthwang', 'tracyyu']
+        min: 1
