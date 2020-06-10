@@ -1,0 +1,9 @@
+version: 2
+mergeable:
+  - when: pull_request.*, pull_request_review.*
+  - name: 'Peer Review'
+  validate:
+    - do: approvals
+      require: 
+        reviewers: [ 'atk1213', 'jeffcho0227',  'vivxz', 'whthwang', 'tracyyu']
+        min: 2
