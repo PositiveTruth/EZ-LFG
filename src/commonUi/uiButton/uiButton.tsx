@@ -1,5 +1,17 @@
-import * as React from 'react';
+import React from "react";
+import style from "./uiButton.module.scss";
 
-export const uiButton = (): JSX.Element => {
-  return <div>button</div>;
+interface UiButtonProps {
+  buttonText: string;
+}
+
+enum UiButtonType {
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
+}
+
+export const UiButton: React.FC<UiButtonProps> = ({
+  buttonText,
+}: UiButtonProps): JSX.Element => {
+  return <button className={style.test}>{buttonText}</button>;
 };
