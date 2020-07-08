@@ -1,8 +1,11 @@
 import React from "react";
+import classNames from "classnames";
 import style from "./uiButton.module.scss";
 
 interface UiButtonProps {
   buttonText: string;
+  subText?: string;
+  className?: string;
 }
 
 enum UiButtonType {
@@ -12,6 +15,13 @@ enum UiButtonType {
 
 export const UiButton: React.FC<UiButtonProps> = ({
   buttonText,
+  subText,
+  className,
 }: UiButtonProps): JSX.Element => {
-  return <button className={style.test}>{buttonText}</button>;
+  let scssClassNames = classNames(style.uiButton, className);
+  return (
+    <div className={scssClassNames}>
+      <button type="submit">{buttonText}</button>
+    </div>
+  );
 };

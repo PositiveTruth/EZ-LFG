@@ -1,0 +1,12 @@
+$button-border-radiou: 8px;
+
+.uiButton {
+  align-items: center;
+
+  button {
+    border-radius: $button-border-radiou;
+    width: 10rem;
+    height: 2rem;
+    border-style: none;
+  }
+}
