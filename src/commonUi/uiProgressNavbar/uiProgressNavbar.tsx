@@ -8,12 +8,12 @@ import { proggressbarStyle } from "./uiProgressNavbarStyle.js";
  - Highlight color
  */
 
-export const uiProgressNavbar = ({
+export function uiProgressNavbar({
   navItems,
   highlightColor,
-}: InferProps<typeof uiProgressNavbar.propTypes>) => {
+}: InferProps<typeof uiProgressNavbar.propTypes>) {
   return <div className="progress-wrapper"></div>;
-};
+}
 
 uiProgressNavbar.propTypes = {
   navItems: PropTypes.arrayOf(PropTypes.string),

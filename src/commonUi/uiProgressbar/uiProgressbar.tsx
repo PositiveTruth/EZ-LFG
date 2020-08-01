@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes, { InferProps } from "prop-types";
-import { proggressbarStyle } from "./uiProgressbarStyle.js";
+import { proggressbarStyle } from "./uiProgressbarStyle";
 
 /**
  * Allows for dynamic changes for:
@@ -17,21 +17,21 @@ import { proggressbarStyle } from "./uiProgressbarStyle.js";
 //   unfilledColor: string
 // }
 
-export const uiProgressbar = ({
+export function uiProgressbar({
   progressValue,
   percentageVisible,
   progressColor,
   unfilledColor,
-}: InferProps<typeof uiProgressbar.propTypes>) => {
+}: InferProps<typeof uiProgressbar.propTypes>) {
   return (
     <div className="progress-wrapper">
-      <div className="progress-bar" style={proggressbarStyle}></div>
+      <div className="progress-bar" css={proggressbarStyle}></div>
       {percentageVisible && (
         <div className="progress-value">{progressValue}</div>
       )}
     </div>
   );
-};
+}
 
 uiProgressbar.propTypes = {
   progressValue: PropTypes.number.isRequired,

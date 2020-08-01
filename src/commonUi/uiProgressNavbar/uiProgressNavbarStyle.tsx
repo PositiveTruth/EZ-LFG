@@ -1,18 +1,16 @@
 import CSS from "csstype";
 
-interface Style extends CSS.Properties, CSS.PropertiesHyphen {}
-
-export const proggressbarStyle: Style = {
+export const proggressbarStyle: CSS.Properties = {
   padding: "4px",
-  "min-width": "10%",
+  minWidth: "10%",
   overflow: "hidden",
-  "white-space": "nowrap",
-  "-webkit-border-radius": "20px",
-  "-moz-border-radius": "20px",
-  "border-radius": "20px",
-  "background-color": "#f63a0f",
+  whiteSpace: "nowrap",
+  // "-webkit-border-radius": "20px",
+  // "-moz-border-radius": "20px",
+  borderRadius: "20px",
+  backgroundColor: "#f63a0f",
   transition: "2s linear",
-  "transition-property": "width, background-color",
-  "box-shadow":
+  transitionProperty: "width, background-color",
+  boxShadow:
     "0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1)",
 };
