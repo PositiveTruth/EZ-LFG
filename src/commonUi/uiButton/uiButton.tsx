@@ -3,25 +3,33 @@ import classNames from "classnames";
 import style from "./uiButton.module.scss";
 
 interface UiButtonProps {
+  ariaLabel: string;
   buttonText: string;
+  elementTag?: string;
+  href?: string;
   subText?: string;
   className?: string;
-}
-
-enum UiButtonType {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
+  onClick?: () => void;
 }
 
 export const UiButton: React.FC<UiButtonProps> = ({
+  elementTag,
   buttonText,
-  subText,
+  ariaLabel,
   className,
+  onClick,
 }: UiButtonProps): JSX.Element => {
-  let scssClassNames = classNames(style.uiButton, className);
+  const scssClassNames = classNames(style.uiButton, className);
+  const Tag: any = elementTag ? elementTag : "button";
+
   return (
-    <div className={scssClassNames}>
-      <button type="submit">{buttonText}</button>
-    </div>
+    <Tag
+      className={scssClassNames}
+      onClick={onClick}
+      type="submit"
+      aria-label={ariaLabel}
+    >
+      {buttonText}
+    </Tag>
   );
 };
