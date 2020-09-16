@@ -10,3 +10,6 @@ function App() {
 }
 
 export default App;
+// testing for the app
+
+// second commit
